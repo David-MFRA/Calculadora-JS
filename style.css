@@ -1,0 +1,132 @@
+:root {
+    --fondo: white;
+    --calculadora: darkgrey;
+    --letra: black;
+    --borde: black;
+    --btn-active: rgb(224, 220, 4);
+    --btn-hover: rgb(212, 210, 210);
+    --boton-limpiar: rgb(154, 255, 193);
+    --boton-limpiar-hover: rgb(67, 204, 119);
+    --boton-limpiar-active: rgb(38, 255, 0);
+    --boton-borrar: rgb(247, 125, 125);
+    --boton-borrar-hover: rgb(251, 86, 86);
+    --boton-borrar-active: rgb(255, 0, 0);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--letra);
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    min-height: 600px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+button {
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.calculadora {
+    width: 400px;
+    border: 2px var(--borde) solid;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--calculadora);
+}
+
+
+.btn {
+    padding: 15px;
+    border: 2px var(--borde) solid;
+    border-radius: 55px;
+    background-color: var(--fondo);
+    font-size: 30px;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.btn:active {
+    background-color: var(--btn-active);
+}
+
+#botonLimpiar {
+    background-color: var(--boton-limpiar);
+}
+
+#botonLimpiar:hover {
+    background-color: var(--boton-limpiar-hover);
+}
+
+#botonLimpiar:active {
+    background-color: var(--boton-limpiar-active);
+}
+
+#botonBorrar {
+    background-color: var(--boton-borrar);
+}
+
+#botonBorrar:hover {
+    background-color: var(--boton-borrar-hover);
+}
+
+#botonBorrar:active {
+    background-color: var(--boton-borrar-active);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.pantalla {
+    padding: 10px 20px;
+    border: 2px var(--borde) solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: var(--fondo);
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+  
+.pantalla-ultima {
+    min-height: 60px;
+    font-size: 30px;
+}
+
+.pantalla-actual {
+    min-height: 64px;
+    font-size: 60px;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
